@@ -1,6 +1,6 @@
 # Nomnompaleo
 
-This project makes it so the user can gain access to certain paleo recipes from https://nomnompaleo.com/ of each month, listing first the names of each recipe, then shows ingredients description and how to make!
+This project makes it so the user can gain access to certain paleo recipes from https://nomnompaleo.com/ of each month, listing first the names of each recipe, then shows ingredients, description, and how to make! This took alot of work and it was such a blast making this!
 
 ## Installation
 
