@@ -67,7 +67,7 @@ class Nomnompaleo::Scraper
      BASE_PATH + month
     end
   
-    def self.create_by_month(month = "2019/02")
+    def self.create_by_month(month = "2020/01")
       scrape = self.new
       scrape.path = scrape.make_path(month)
       scrape
@@ -82,7 +82,7 @@ class Nomnompaleo::Scraper
     def scrape_ingredients
       begin
         file = open(self.recipe.link)
-        Nokogiri::HTML(file).css(".wprm-recipe-container")
+        Nokogiri::HTML(file).css("recipe-container")
       rescue
         puts "Cannot open URL!"
       end
@@ -91,7 +91,7 @@ class Nomnompaleo::Scraper
     def scrape_prep
       begin
         file = open(self.recipe.link)
-        Nokogiri::HTML(file).css(".wprm-recipe-instruction")
+        Nokogiri::HTML(file).css("recipe-instruction")
       rescue
         puts "Cannot open URL!"
       end
@@ -100,7 +100,7 @@ class Nomnompaleo::Scraper
     def scrape_prep_notes
       begin
         file = open(self.recipe.link)
-        Nokogiri::HTML(file).css(".wprm-recipe-notes-container p")
+        Nokogiri::HTML(file).css("recipe-notes-container p")
       rescue
         puts "Cannot open URL!"
       end
