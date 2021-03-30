@@ -67,7 +67,7 @@ class Nomnompaleo::Scraper
      BASE_PATH + month
     end
   
-    def self.create_by_month(month = "2020/01")
+    def self.create_by_month(month = "2021/00")
       scrape = self.new
       scrape.path = scrape.make_path(month)
       scrape

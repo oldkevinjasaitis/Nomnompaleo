@@ -118,12 +118,12 @@ class Nomnompaleo::CLI
   
     def list_month_recipes
       self.month = nil
-      puts "Please select a month in 2020 to find the recipes for that month using this example (2020/XX) X being 01-12"
+      puts "Please select a month in 2021 to find the recipes for that month using this example (2021/XX) X being 01-12"
       bad_month = true
       while bad_month && !self.exit
-        print "> ".colorize(:red)
+        print "> ".colorize(:green)
         input = gets.chomp
-        if input.match?(/2020\/\d/)
+        if input.match?(/2021\/\d/)
           self.month = input
           puts "Recipes for this month are:"
           puts SEPARATOR

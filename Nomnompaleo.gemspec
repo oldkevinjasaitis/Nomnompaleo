@@ -8,13 +8,13 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Using the wesbite nomnompaleo.com to get some paleo recipes!}
   spec.description   = %q{Paleo Recipe Scraper}
-  spec.homepage      = "www.nomnompaleo.com."
+  spec.homepage      = "https://github.com/kevinjasaitis/Nomnompaleo"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "github.com/kevinjasaitis"
+  spec.metadata["source_code_uri"] = "https://github.com/kevinjasaitis/Nomnompaleo"
   spec.metadata["changelog_uri"] = "github.com/kevinjasaitis/changelog.md"
 
   # Specify which files should be added to the gem when it is released.
@@ -25,4 +25,11 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+   spec.add_development_dependency "bundler", "~> 1.10"
+   spec.add_development_dependency "rake", "~> 10.0"
+   spec.add_development_dependency "rspec"
+   spec.add_development_dependency "pry"
+
+   spec.add_dependency "nokogiri"
 end
